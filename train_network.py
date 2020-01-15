@@ -1,8 +1,8 @@
 from keras.layers import Input, Lambda, Dense, Flatten
 from keras.models import Model
 from keras.models import Sequential
-from keras.applications.DenseNet121 import DenseNet121
-from keras.applications.DenseNet121 import preprocess_input
+from keras.applications.densenet import DenseNet121
+from keras.applications.densenet import preprocess_input
 from keras.preprocessing import image
 import numpy as np
 from glob import glob
