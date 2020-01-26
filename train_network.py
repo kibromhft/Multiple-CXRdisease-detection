@@ -1,3 +1,6 @@
+import tensorflow as tf
+print("Keras version:", keras.__version__)
+print("TensorFlow version:", tf.__version__)
 from keras.layers import Input, Lambda, Dense, Flatten
 from keras.models import Model
 from keras.models import Sequential
