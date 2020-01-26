@@ -4,6 +4,7 @@ print("TensorFlow version:", tf.__version__)
 from keras.layers import Input, Lambda, Dense, Flatten
 from keras.models import Model
 from keras.models import Sequential
+from keras.optimizers import Adam
 from keras.applications.densenet import DenseNet121
 from keras.applications.densenet import preprocess_input
 from keras.preprocessing import image
