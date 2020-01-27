@@ -11,6 +11,8 @@ from keras.preprocessing import image
 import numpy as np
 from glob import glob
 from keras.preprocessing.image import ImageDataGenerator
+from keras import backend as K
+
 #Load the pre-trained model
 #add preprocessing layer to the front of DenseNet
 densenet = DenseNet121(
