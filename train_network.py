@@ -46,3 +46,14 @@ model.compile(
   optimizer='adam',
   metrics=['accuracy']
 )
+counter = 0
+for epoch in range(EPOCHS):
+    for batch_idx in range(0, number_training_samples, BATCH_SIZE):
+        # get training batch:
+        x = ...
+        y = ...
+        # calculate learning rate:
+        current_learning_rate = calculate_learning_rate(counter)
+        # train model:
+        K.set_value(model.optimizer.lr, current_learning_rate)  # set new lr
+        loss = model.train_on_batch(x, y)
