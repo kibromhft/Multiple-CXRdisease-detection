@@ -47,8 +47,9 @@ model.compile(
   metrics=['accuracy']
 )
 # define mini-batch generator here
-for i in range(NUM_OF_TRAINING_STEPS):
-   # get next mini-batch
-   x = ... #what x is supposed to be?
-   y = ...
+def get_batch(data_x,data_y,batch_size=32):
+    batch_n=len(data_x)//batch_size
+    for i in range(batch_n):
+        batch_x=data_x[i*batch_size:(i+1)*batch_size]
+        batch_y=data_y[i*batch_size:(i+1)*batch_size]
    model.train_on_batch(x,y)
